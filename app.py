@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 # ── Page config ───────────────────────────────────────────
 st.set_page_config(
-    page_title="Labometrica",
+    page_title="Labmetrica",
     page_icon="🧬",
     layout="wide"
 )
@@ -19,7 +19,7 @@ df = load_data()
 
 # ── Sidebar ───────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### 🧬 LABOMETRICA")
+    st.markdown("### 🧬 LABMETRICA")
     st.caption("ANALYSER V0.1")
     st.divider()
     st.markdown("**NAVIGATION**")
@@ -41,7 +41,7 @@ with st.sidebar:
 
 if page == "Overview":
 
-    st.markdown("## Labometrica")
+    st.markdown("## Labmetrica")
 
     if "hazard_filter" not in st.session_state:
         st.session_state.hazard_filter = "ALL"
