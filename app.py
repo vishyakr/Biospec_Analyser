@@ -1936,6 +1936,1309 @@ elif page == "Reaction Predictor":
             "hazard_rise": "DANGER — methanol is toxic; HCl is corrosive; methyl chloride is toxic gas",
             "temp":        "Elevated temperature for gas-phase reaction",
             "warning":     "⚠️ Methanol is toxic by ingestion and inhalation causing blindness. Fume hood mandatory."
+        },frozenset(["mercury chloride", "sodium hydroxide"]): {
+            "type":        "Precipitation — Mercury(II) Oxide",
+            "equation":    "HgCl₂ + 2NaOH → HgO↓ + 2NaCl + H₂O",
+            "conditions":  "Aqueous, room temperature, alkaline pH",
+            "outcome":     "Yellow mercuric oxide precipitates. The solid remains highly toxic and must be collected as mercury waste.",
+            "hazard_rise": "EXTREME DANGER — insoluble mercury compounds persist and bioaccumulate",
+            "temp":        "Room temperature — immediate precipitation",
+            "warning":     "🚨 Never pour mercury-containing waste down the drain. Collect in a labelled heavy-metal waste container."
+        },
+        frozenset(["mercury chloride", "potassium iodide"]): {
+            "type":        "Precipitation then Complexation (Nessler-type chemistry)",
+            "equation":    "HgCl₂ + 2KI → HgI₂↓ + 2KCl;  HgI₂ + 2KI → K₂[HgI₄]",
+            "conditions":  "Aqueous, room temperature; excess iodide redissolves the precipitate",
+            "outcome":     "Scarlet HgI₂ precipitate forms first, then dissolves in excess KI as the soluble tetraiodomercurate complex.",
+            "hazard_rise": "EXTREME DANGER — soluble mercury complexes are readily absorbed",
+            "temp":        "Room temperature",
+            "warning":     "🚨 Both the precipitate and the clear solution are toxic mercury waste. Double gloves and fume hood."
+        },
+        frozenset(["mercury chloride", "dithiothreitol"]): {
+            "type":        "Thiol Binding — Mercury Chelation",
+            "equation":    "Hg²⁺ + DTT(SH)₂ → Hg(DTT) complex + 2H⁺",
+            "conditions":  "Aqueous, pH 7–8, room temperature",
+            "outcome":     "The dithiol binds Hg²⁺ very strongly, removing it from solution and protecting protein thiols.",
+            "hazard_rise": "DANGER — the Hg–DTT complex is still toxic waste",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Dithiols are used as mercury antidotes in toxicology, but the mixture must still be disposed of as mercury waste."
+        },
+        frozenset(["mercury chloride", "beta-mercaptoethanol"]): {
+            "type":        "Thiol Binding — Mercaptide Formation",
+            "equation":    "HgCl₂ + 2HOCH₂CH₂SH → Hg(SCH₂CH₂OH)₂ + 2HCl",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Stable mercury mercaptide forms. Strong thiol odour is released together with acid.",
+            "hazard_rise": "EXTREME DANGER — toxic mercury compound plus toxic, foul-smelling thiol",
+            "temp":        "Room temperature",
+            "warning":     "🚨 Fume hood mandatory. Treat all residues as mercury waste."
+        },
+        frozenset(["mercury chloride", "silver nitrate"]): {
+            "type":        "Double Displacement — Silver Chloride Precipitation",
+            "equation":    "HgCl₂ + 2AgNO₃ → 2AgCl↓ + Hg(NO₃)₂",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "White silver chloride precipitates and soluble mercuric nitrate remains in solution.",
+            "hazard_rise": "EXTREME DANGER — leaves highly toxic soluble mercury",
+            "temp":        "Room temperature — immediate",
+            "warning":     "🚨 The filtrate contains soluble Hg²⁺. Collect separately as mercury waste."
+        },
+        frozenset(["mercury chloride", "sodium chloride"]): {
+            "type":        "Chloro-Complex Formation",
+            "equation":    "HgCl₂ + 2Cl⁻ → [HgCl₄]²⁻",
+            "conditions":  "Aqueous, chloride in excess",
+            "outcome":     "Excess chloride converts HgCl₂ into a soluble tetrachloromercurate ion, increasing mercury mobility.",
+            "hazard_rise": "DANGER — higher solubility means greater absorption risk",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Saline-containing mercury waste is still fully hazardous. Do not dilute and discard."
+        },
+        frozenset(["mercury chloride", "bovine serum albumin"]): {
+            "type":        "Protein Thiol Binding",
+            "equation":    "Hg²⁺ + BSA–SH → BSA–S–Hg⁺ (Cys34 binding)",
+            "conditions":  "Aqueous, physiological pH, room temperature",
+            "outcome":     "Hg²⁺ binds the free cysteine of albumin and can denature or precipitate the protein at higher doses.",
+            "hazard_rise": "EXTREME DANGER — models how mercury is carried in blood",
+            "temp":        "Room temperature",
+            "warning":     "🚨 BSA solutions contaminated with mercury are mercury waste. Never autoclave."
+        },
+        frozenset(["silver nitrate", "sodium hydroxide"]): {
+            "type":        "Precipitation — Silver(I) Oxide",
+            "equation":    "2AgNO₃ + 2NaOH → Ag₂O↓ + 2NaNO₃ + H₂O",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Dark brown silver oxide precipitates immediately. Used to prepare Tollens-type reagents.",
+            "hazard_rise": "WARNING — staining and heavy-metal waste",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Silver stains skin black. Collect all silver residues in heavy-metal waste."
+        },
+        frozenset(["silver nitrate", "potassium iodide"]): {
+            "type":        "Precipitation — Silver Iodide",
+            "equation":    "AgNO₃ + KI → AgI↓ + KNO₃",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Pale yellow AgI forms; it is extremely insoluble and does not dissolve in dilute ammonia.",
+            "hazard_rise": "WARNING — silver heavy-metal waste",
+            "temp":        "Room temperature — immediate",
+            "warning":     "🔶 Light sensitive. Keep silver waste in dark bottles and dispose as heavy-metal waste."
+        },
+        frozenset(["silver nitrate", "hydrochloric acid"]): {
+            "type":        "Precipitation — Silver Chloride",
+            "equation":    "AgNO₃ + HCl → AgCl↓ + HNO₃",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "White curdy AgCl forms and leaves nitric acid in solution. The precipitate dissolves in ammonia.",
+            "hazard_rise": "WARNING → DANGER (the filtrate contains nitric acid)",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Treat the filtrate as corrosive. Silver chloride darkens in light."
+        },
+        frozenset(["silver nitrate", "formaldehyde"]): {
+            "type":        "Reduction — Silver Metal Deposition",
+            "equation":    "2Ag⁺ + HCHO + 3OH⁻ → 2Ag↓ + HCOO⁻ + 2H₂O",
+            "conditions":  "Alkaline pH, room temperature or gentle warming",
+            "outcome":     "Formaldehyde reduces silver ions to metallic silver. This is the chemistry behind silver staining of gels.",
+            "hazard_rise": "DANGER — formaldehyde vapour plus silver waste",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Fume hood required. Do not store mixed silver–organic solutions; reduced silver can deposit as fine particles."
+        },
+        frozenset(["silver nitrate", "ascorbic acid"]): {
+            "type":        "Reduction — Silver Nanoparticle Formation",
+            "equation":    "2Ag⁺ + C₆H₈O₆ → 2Ag⁰ + C₆H₆O₆ + 2H⁺",
+            "conditions":  "Aqueous, room temperature; stabiliser controls particle size",
+            "outcome":     "Ascorbate reduces Ag⁺ to silver nanoparticles. The solution turns yellow-brown to grey.",
+            "hazard_rise": "WARNING — nanoparticle and silver waste",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Nanosilver is toxic to aquatic life. Collect all waste for metal disposal."
+        },
+        frozenset(["silver nitrate", "sodium carbonate"]): {
+            "type":        "Precipitation — Silver Carbonate",
+            "equation":    "2AgNO₃ + Na₂CO₃ → Ag₂CO₃↓ + 2NaNO₃",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Pale yellow Ag₂CO₃ forms and slowly darkens to Ag₂O or silver metal in light or on warming.",
+            "hazard_rise": "WARNING — silver heavy-metal waste",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Light sensitive precipitate. Dispose as heavy-metal waste."
+        },
+        frozenset(["silver nitrate", "dopamine hcl"]): {
+            "type":        "Catechol Reduction — Silver Nanoparticle Formation",
+            "equation":    "Ag⁺ + dopamine (catechol) → Ag⁰ + dopamine-quinone + H⁺",
+            "conditions":  "Aqueous, mildly alkaline pH (≈8.5), room temperature",
+            "outcome":     "The catechol reduces silver ions, depositing nanoparticles on the forming polydopamine layer.",
+            "hazard_rise": "WARNING — silver waste and reactive quinones",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Used for antimicrobial coatings. Handle silver solutions with gloves and collect all waste."
+        },
+        frozenset(["silver nitrate", "l-cysteine"]): {
+            "type":        "Thiolate Precipitation",
+            "equation":    "Ag⁺ + HS–CH₂CH(NH₂)COOH → Ag–S–cysteinate↓ + H⁺",
+            "conditions":  "Aqueous, neutral pH, room temperature",
+            "outcome":     "Silver binds the thiol group strongly and forms an insoluble silver cysteinate. Explains silver's antimicrobial thiol attack.",
+            "hazard_rise": "WARNING — silver heavy-metal waste",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Collect as silver waste. Do not mix silver nitrate with thiol-containing buffers."
+        },
+        frozenset(["copper sulfate", "ascorbic acid"]): {
+            "type":        "Reduction — Cu(I) Generation and ROS Formation",
+            "equation":    "2Cu²⁺ + C₆H₈O₆ → 2Cu⁺ + C₆H₆O₆ + 2H⁺",
+            "conditions":  "Aqueous, room temperature, oxygen present",
+            "outcome":     "Ascorbate reduces Cu²⁺ to Cu⁺, the active species in click chemistry. In air it also generates H₂O₂ and hydroxyl radicals.",
+            "hazard_rise": "WARNING — oxidative damage to proteins and DNA",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Add a Cu(I) ligand and degas buffers for click reactions to limit radical damage."
+        },
+        frozenset(["copper sulfate", "sodium carbonate"]): {
+            "type":        "Precipitation — Basic Copper Carbonate",
+            "equation":    "2CuSO₄ + 2Na₂CO₃ + H₂O → Cu₂(OH)₂CO₃↓ + 2Na₂SO₄ + CO₂↑",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "A blue-green precipitate of malachite-type copper carbonate forms with CO₂ evolution.",
+            "hazard_rise": "WARNING — copper is toxic to aquatic life",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Collect copper-containing waste. Do not discharge to drains."
+        },
+        frozenset(["copper sulfate", "dithiothreitol"]): {
+            "type":        "Metal-Catalysed Thiol Oxidation",
+            "equation":    "2 DTT(SH)₂ + O₂ →(Cu²⁺)→ oxidised DTT + H₂O₂",
+            "conditions":  "Aqueous, pH > 7, oxygen present",
+            "outcome":     "Copper rapidly oxidises DTT, destroying its reducing activity and generating H₂O₂ and radicals.",
+            "hazard_rise": "WARNING — loss of reducing capacity and oxidative damage",
+            "temp":        "Room temperature, fast at alkaline pH",
+            "warning":     "🔶 Keep copper away from DTT stocks. Add EDTA to protect DTT in buffers."
+        },
+        frozenset(["copper sulfate", "potassium iodide"]): {
+            "type":        "Redox — Iodometric Reaction",
+            "equation":    "2Cu²⁺ + 4I⁻ → 2CuI↓ + I₂",
+            "conditions":  "Aqueous, slightly acidic, room temperature",
+            "outcome":     "White copper(I) iodide precipitates in brown iodine solution. Basis of iodometric copper determination.",
+            "hazard_rise": "WARNING — iodine release and copper waste",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Iodine stains and is irritating. Titrate with thiosulfate for quantitation and dispose of copper properly."
+        },
+        frozenset(["copper sulfate", "citric acid"]): {
+            "type":        "Complexation — Copper Citrate (Benedict's chemistry)",
+            "equation":    "Cu²⁺ + citrate³⁻ → [Cu(citrate)]⁻",
+            "conditions":  "Aqueous; in alkaline carbonate this is Benedict's reagent",
+            "outcome":     "Citrate keeps copper(II) in solution at alkaline pH, preventing hydroxide precipitation. Used to detect reducing sugars.",
+            "hazard_rise": "WARNING — copper waste",
+            "temp":        "Room temperature; sugar test heated to 100°C",
+            "warning":     "🔶 Dispose of copper solutions as heavy-metal waste."
+        },
+        frozenset(["copper sulfate", "pyridine"]): {
+            "type":        "Complexation — Tetrapyridine Copper(II)",
+            "equation":    "Cu²⁺ + 4C₅H₅N → [Cu(C₅H₅N)₄]²⁺",
+            "conditions":  "Aqueous or organic solvent, room temperature",
+            "outcome":     "A deep blue copper–pyridine complex forms and dissolves readily.",
+            "hazard_rise": "DANGER — pyridine is toxic and flammable; copper is toxic",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Pyridine has a strong odour and is harmful by inhalation. Fume hood mandatory."
+        },
+        frozenset(["copper sulfate", "triethanolamine"]): {
+            "type":        "Complexation — Copper–Amino Alcohol Complex",
+            "equation":    "Cu²⁺ + N(CH₂CH₂OH)₃ → [Cu(TEA)] complex",
+            "conditions":  "Aqueous, neutral to alkaline pH",
+            "outcome":     "TEA holds copper in solution at high pH, preventing Cu(OH)₂ precipitation. Colour changes to deep blue.",
+            "hazard_rise": "WARNING — copper waste",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Complexed copper is still toxic to aquatic life. Collect waste."
+        },
+        frozenset(["copper sulfate", "hydrogen peroxide"]): {
+            "type":        "Catalytic Decomposition / Fenton-like Chemistry",
+            "equation":    "2H₂O₂ →(Cu²⁺)→ 2H₂O + O₂↑",
+            "conditions":  "Aqueous, room temperature; faster at alkaline pH",
+            "outcome":     "Copper ions catalyse H₂O₂ decomposition with oxygen evolution and, with reductants, form hydroxyl radicals.",
+            "hazard_rise": "DANGER — pressure build-up and oxidative radicals",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Never seal containers holding peroxide with metal ions. Trace copper destabilises peroxide stocks."
+        },
+        frozenset(["copper sulfate", "bovine serum albumin"]): {
+            "type":        "Metal–Protein Binding (Biuret Chemistry)",
+            "equation":    "Cu²⁺ + BSA → Cu–BSA complex (N-terminal Asp-Ala-His site and His residues)",
+            "conditions":  "Aqueous, neutral pH; alkaline pH gives the violet Biuret complex",
+            "outcome":     "Albumin strongly binds Cu²⁺. In alkaline solution a purple copper–peptide complex forms for protein quantitation.",
+            "hazard_rise": "SAFE — routine biochemical interaction at low concentrations",
+            "temp":        "Room temperature",
+            "warning":     "✅ Standard protein-assay chemistry. Reducing agents interfere with copper-based assays."
+        },
+        frozenset(["copper sulfate", "histidine"]): {
+            "type":        "Complexation — Copper–Histidine",
+            "equation":    "Cu²⁺ + 2 His → Cu(His)₂",
+            "conditions":  "Aqueous, pH 7, room temperature",
+            "outcome":     "A stable blue Cu(His)₂ complex forms. Histidine is the main small-molecule copper carrier in blood.",
+            "hazard_rise": "SAFE — used in copper supplementation formulations",
+            "temp":        "Room temperature",
+            "warning":     "✅ Histidine in buffers will sequester trace copper and can interfere with metal-dependent assays."
+        },
+        frozenset(["ferric chloride", "sodium hydroxide"]): {
+            "type":        "Precipitation — Iron(III) Hydroxide",
+            "equation":    "FeCl₃ + 3NaOH → Fe(OH)₃↓ + 3NaCl",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Rust-brown gelatinous Fe(OH)₃ precipitates. Used in water treatment to remove phosphate and arsenic.",
+            "hazard_rise": "WARNING — corrosive base; iron sludge residue",
+            "temp":        "Room temperature, mildly exothermic",
+            "warning":     "🔶 The gel clogs filters and stains glassware. Rinse with dilute acid."
+        },
+        frozenset(["ferric chloride", "edta"]): {
+            "type":        "Chelation — Iron(III)–EDTA",
+            "equation":    "Fe³⁺ + EDTA⁴⁻ → [Fe(EDTA)]⁻",
+            "conditions":  "Aqueous, wide pH range, room temperature",
+            "outcome":     "A very stable yellow complex forms. EDTA prevents iron precipitation and suppresses Fenton chemistry in some conditions.",
+            "hazard_rise": "SAFE — widely used iron fortification and micronutrient form",
+            "temp":        "Room temperature",
+            "warning":     "✅ Fe–EDTA can still catalyse oxidation when reductants and peroxide are present."
+        },
+        frozenset(["ferric chloride", "ascorbic acid"]): {
+            "type":        "Redox — Iron(III) Reduction",
+            "equation":    "2Fe³⁺ + C₆H₈O₆ → 2Fe²⁺ + C₆H₆O₆ + 2H⁺",
+            "conditions":  "Acidic aqueous, room temperature",
+            "outcome":     "Ascorbate reduces Fe³⁺ to Fe²⁺. In air or with peroxide the Fe²⁺ then generates hydroxyl radicals (pro-oxidant effect).",
+            "hazard_rise": "WARNING — can switch from antioxidant to pro-oxidant",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Do not store ascorbate with free iron. The pair is the basis of the FRAP antioxidant assay."
+        },
+        frozenset(["ferric chloride", "phenol"]): {
+            "type":        "Colour Complex — Ferric Chloride Test",
+            "equation":    "6C₆H₅OH + Fe³⁺ → [Fe(OC₆H₅)₆]³⁻ + 6H⁺",
+            "conditions":  "Neutral aqueous or alcoholic solution, room temperature",
+            "outcome":     "A violet complex forms, the classic qualitative test for phenols.",
+            "hazard_rise": "DANGER — phenol is corrosive and absorbed through skin",
+            "temp":        "Room temperature — immediate colour",
+            "warning":     "⚠️ Use micro-scale volumes. Phenol waste must be collected separately."
+        },
+        frozenset(["ferric chloride", "dopamine hcl"]): {
+            "type":        "Catechol–Iron Coordination and Oxidation",
+            "equation":    "Fe³⁺ + 3 dopamine (catechol) → [Fe(catecholate)₃]³⁻ + 6H⁺",
+            "conditions":  "Aqueous; colour depends on pH (green → blue → red-violet)",
+            "outcome":     "Strong tris-catecholate complexes form and iron accelerates dopamine oxidation to polydopamine.",
+            "hazard_rise": "WARNING — rapid dopamine degradation",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Keep dopamine solutions free of metals and protect from air."
+        },
+        frozenset(["ferric chloride", "citric acid"]): {
+            "type":        "Chelation — Iron Citrate",
+            "equation":    "Fe³⁺ + citrate³⁻ → [Fe(citrate)]",
+            "conditions":  "Aqueous, acidic to neutral pH",
+            "outcome":     "A yellow-green soluble Fe(III) citrate complex forms. It is light sensitive and photoreduces to Fe²⁺ with CO₂ loss.",
+            "hazard_rise": "SAFE — used in culture media and iron supplements",
+            "temp":        "Room temperature; protect from light",
+            "warning":     "✅ Store iron–citrate stocks in the dark."
+        },
+        frozenset(["ferric chloride", "potassium iodide"]): {
+            "type":        "Redox — Iodine Liberation",
+            "equation":    "2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂",
+            "conditions":  "Aqueous, acidic, room temperature",
+            "outcome":     "Ferric iron oxidises iodide to iodine, giving a brown solution. Used in iodometric analysis.",
+            "hazard_rise": "WARNING — iodine release",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Iodine is irritating and stains. Neutralise with thiosulfate before disposal."
+        },
+        frozenset(["ferric chloride", "sodium bicarbonate"]): {
+            "type":        "Hydrolysis — Iron(III) Hydroxide and CO₂",
+            "equation":    "FeCl₃ + 3NaHCO₃ → Fe(OH)₃↓ + 3NaCl + 3CO₂↑",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Brown iron hydroxide precipitates with vigorous effervescence.",
+            "hazard_rise": "WARNING — foaming and splashing of acidic iron solution",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Add bicarbonate slowly. Foam can overflow the vessel."
+        },
+        frozenset(["ferric chloride", "tetracycline"]): {
+            "type":        "Metal Chelation — Antibiotic Complexation",
+            "equation":    "Fe³⁺ + tetracycline → Fe–tetracycline chelate",
+            "conditions":  "Aqueous, physiological pH, room temperature",
+            "outcome":     "Iron binds tetracycline, giving a coloured complex that is poorly absorbed and less active.",
+            "hazard_rise": "WARNING — loss of antibiotic activity",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Do not combine tetracycline with iron supplements. Separate dosing by at least 2–3 hours."
+        },
+        frozenset(["ferric chloride", "lactic acid"]): {
+            "type":        "Colour Complex — Uffelmann Test",
+            "equation":    "Fe³⁺ + 3CH₃CH(OH)COO⁻ → Fe(lactate)₃ (yellow-green)",
+            "conditions":  "Aqueous, room temperature, performed on violet FeCl₃–phenol reagent",
+            "outcome":     "The violet FeCl₃–phenol colour turns yellow in the presence of lactic acid. Classic test for lactate.",
+            "hazard_rise": "WARNING — acidic iron solution",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Reagent contains phenol, so wear gloves and work in a hood."
+        },
+        frozenset(["ferric chloride", "phosphoric acid"]): {
+            "type":        "Iron Phosphate Formation (Rust Conversion)",
+            "equation":    "FeCl₃ + H₃PO₄ → FePO₄ + 3HCl",
+            "conditions":  "Aqueous, acidic, room temperature",
+            "outcome":     "Iron phosphate forms and, on iron surfaces, converts rust to a protective phosphate layer.",
+            "hazard_rise": "DANGER — corrosive acid mixture",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Strongly acidic and staining. Wear splash protection."
+        },
+        frozenset(["zinc chloride", "sodium hydroxide"]): {
+            "type":        "Precipitation then Redissolution (Amphoteric Hydroxide)",
+            "equation":    "ZnCl₂ + 2NaOH → Zn(OH)₂↓ + 2NaCl;  Zn(OH)₂ + 2OH⁻ → [Zn(OH)₄]²⁻",
+            "conditions":  "Aqueous, room temperature; excess NaOH dissolves the precipitate",
+            "outcome":     "White zinc hydroxide forms and dissolves again as zincate in excess base. Useful for buffer pH control.",
+            "hazard_rise": "WARNING — corrosive base; zinc toxic to aquatic life",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Add NaOH dropwise. Collect zinc-containing waste."
+        },
+        frozenset(["zinc chloride", "edta"]): {
+            "type":        "Chelation — Zinc–EDTA",
+            "equation":    "Zn²⁺ + EDTA⁴⁻ → [Zn(EDTA)]²⁻",
+            "conditions":  "Aqueous, pH > 4, room temperature",
+            "outcome":     "EDTA strongly binds zinc, removing it from metalloenzymes. Used to strip zinc and inhibit zinc proteases.",
+            "hazard_rise": "SAFE — routine chelation step",
+            "temp":        "Room temperature",
+            "warning":     "✅ Add excess Zn²⁺ back to restore zinc-dependent enzyme activity."
+        },
+        frozenset(["zinc chloride", "imidazole"]): {
+            "type":        "Metal Coordination — Zinc–Imidazole",
+            "equation":    "Zn²⁺ + n imidazole → [Zn(imidazole)ₙ]²⁺",
+            "conditions":  "Aqueous, neutral pH, room temperature",
+            "outcome":     "Imidazole competes with histidine for Zn²⁺, the principle behind zinc IMAC elution and zinc-finger buffers.",
+            "hazard_rise": "SAFE — standard protein purification chemistry",
+            "temp":        "Room temperature",
+            "warning":     "✅ Use imidazole gradients to elute His-tagged proteins from Zn²⁺ or Ni²⁺ resins."
+        },
+        frozenset(["zinc chloride", "l-cysteine"]): {
+            "type":        "Thiolate Coordination — Zinc–Cysteine",
+            "equation":    "Zn²⁺ + 2 Cys–SH → Zn(Cys–S)₂ + 2H⁺",
+            "conditions":  "Aqueous, neutral to alkaline pH",
+            "outcome":     "Zinc binds cysteine thiolates, the same coordination used by zinc-finger proteins.",
+            "hazard_rise": "SAFE — biologically relevant interaction",
+            "temp":        "Room temperature",
+            "warning":     "✅ Include a reducing agent to prevent cysteine oxidation in zinc-binding studies."
+        },
+        frozenset(["zinc chloride", "ammonium chloride"]): {
+            "type":        "Salt Mixture — Flux / Dry-Cell Electrolyte",
+            "equation":    "ZnCl₂ + 2NH₄Cl → (NH₄)₂ZnCl₄ (on concentrating)",
+            "conditions":  "Aqueous, heating releases HCl and NH₃",
+            "outcome":     "The mixture is acidic, cleans metal oxides (soldering flux) and is the electrolyte in zinc–carbon batteries.",
+            "hazard_rise": "WARNING — corrosive fumes when heated",
+            "temp":        "Fumes begin when heated above ~100°C",
+            "warning":     "🔶 Heating releases irritating HCl and ammonia. Use a fume hood."
+        },
+        frozenset(["zinc sulfate", "histidine"]): {
+            "type":        "Complexation — Zinc–Histidine",
+            "equation":    "Zn²⁺ + 2 His → Zn(His)₂",
+            "conditions":  "Aqueous, pH ~7, room temperature",
+            "outcome":     "A soluble stable zinc complex forms and is used in nutritional supplements and zinc-stabilised protein formulations.",
+            "hazard_rise": "SAFE — compatible combination",
+            "temp":        "Room temperature",
+            "warning":     "✅ Histidine buffers will bind trace zinc and alter assays of zinc enzymes."
+        },
+        frozenset(["calcium chloride", "sodium dodecyl sulfate"]): {
+            "type":        "Precipitation — Calcium Dodecyl Sulfate",
+            "equation":    "Ca²⁺ + 2C₁₂H₂₅OSO₃⁻ → Ca(C₁₂H₂₅OSO₃)₂↓",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "SDS precipitates as an insoluble calcium salt, causing cloudy samples and loss of detergent action.",
+            "hazard_rise": "WARNING — assay failure and clogged tips",
+            "temp":        "Room temperature; worse in the cold",
+            "warning":     "🔶 Add EDTA or keep Ca²⁺ out of SDS buffers."
+        },
+        frozenset(["calcium chloride", "sodium carbonate"]): {
+            "type":        "Precipitation — Calcium Carbonate",
+            "equation":    "CaCl₂ + Na₂CO₃ → CaCO₃↓ + 2NaCl",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "White chalky CaCO₃ precipitates immediately. Basis of water-softening and hardness removal.",
+            "hazard_rise": "SAFE — non-hazardous precipitate",
+            "temp":        "Room temperature",
+            "warning":     "✅ Scale builds up on glassware. Remove with dilute acetic acid."
+        },
+        frozenset(["calcium chloride", "sulfuric acid"]): {
+            "type":        "Double Displacement — Gypsum Formation",
+            "equation":    "CaCl₂ + H₂SO₄ → CaSO₄↓ + 2HCl",
+            "conditions":  "Aqueous; concentrated acid releases HCl gas",
+            "outcome":     "Calcium sulfate precipitates and hydrochloric acid is generated; concentrated mixtures give off HCl fumes.",
+            "hazard_rise": "DANGER — corrosive acid fumes",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Add acid slowly with stirring in a fume hood."
+        },
+        frozenset(["calcium chloride", "ethanol"]): {
+            "type":        "Solvation — Calcium Chloride–Ethanol Adduct",
+            "equation":    "CaCl₂ + n C₂H₅OH → CaCl₂·nC₂H₅OH",
+            "conditions":  "Anhydrous or concentrated ethanol, room temperature",
+            "outcome":     "Calcium chloride dissolves in ethanol exothermically and forms alcohol adducts, so it cannot be used to dry ethanol.",
+            "hazard_rise": "WARNING — flammable solvent with an exothermic dissolution",
+            "temp":        "Mildly exothermic",
+            "warning":     "🔶 Keep away from ignition sources. Use molecular sieves to dry ethanol instead."
+        },
+        frozenset(["calcium phosphate", "hydrochloric acid"]): {
+            "type":        "Acid Dissolution",
+            "equation":    "Ca₃(PO₄)₂ + 6HCl → 3CaCl₂ + 2H₃PO₄",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "The insoluble calcium phosphate dissolves, releasing soluble calcium chloride and phosphoric acid.",
+            "hazard_rise": "WARNING — corrosive solution",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Basis of acid demineralisation of bone and teeth. Wear splash protection."
+        },
+        frozenset(["calcium phosphate", "edta"]): {
+            "type":        "Chelation — Decalcification",
+            "equation":    "Ca₃(PO₄)₂ + 3EDTA⁴⁻ → 3[Ca(EDTA)]²⁻ + 2PO₄³⁻",
+            "conditions":  "Aqueous, pH 7–8, room temperature, days to weeks",
+            "outcome":     "EDTA slowly strips calcium from the mineral, softening bone and tissue for sectioning while preserving antigens.",
+            "hazard_rise": "SAFE — standard histology demineralisation",
+            "temp":        "Room temperature or 4°C",
+            "warning":     "✅ Gentler than acid decalcification and preferred for immunostaining."
+        },
+        frozenset(["sodium hypochlorite", "ethanol"]): {
+            "type":        "Haloform-Type Oxidative Chlorination",
+            "equation":    "C₂H₅OH + NaOCl → CH₃CHO → chlorinated products (CHCl₃, chloral)",
+            "conditions":  "Aqueous, room temperature, excess hypochlorite",
+            "outcome":     "Hypochlorite oxidises and chlorinates ethanol, generating chloroform and other toxic chlorinated organics.",
+            "hazard_rise": "DANGER — toxic chlorinated by-products and heat",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Never mix bleach with alcohols. Rinse ethanol-wiped surfaces before applying bleach."
+        },
+        frozenset(["sodium hypochlorite", "acetone"]): {
+            "type":        "Haloform Reaction",
+            "equation":    "CH₃COCH₃ + 3NaOCl → CHCl₃ + CH₃COONa + 2NaOH",
+            "conditions":  "Aqueous, alkaline, room temperature",
+            "outcome":     "Acetone is chlorinated to chloroform, with heat release. Mixtures can form chloroacetones that are irritants.",
+            "hazard_rise": "DANGER — toxic chloroform and strong irritants",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Never combine bleach with acetone. Ventilate and keep waste streams separate."
+        },
+        frozenset(["sodium hypochlorite", "isopropanol"]): {
+            "type":        "Oxidation then Haloform Chlorination",
+            "equation":    "(CH₃)₂CHOH + NaOCl → CH₃COCH₃ → CHCl₃ + CH₃COONa",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Isopropanol oxidises to acetone and then gives chloroform and chlorinated ketones.",
+            "hazard_rise": "DANGER — toxic chlorinated organics",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Do not mix bleach with isopropanol disinfectants or waste."
+        },
+        frozenset(["sodium hypochlorite", "sodium hydroxide"]): {
+            "type":        "Stabilisation",
+            "equation":    "OCl⁻ + OH⁻ — no net reaction (suppresses HOCl and Cl₂ formation)",
+            "conditions":  "Aqueous, pH > 11, room temperature",
+            "outcome":     "Alkaline pH keeps hypochlorite as OCl⁻, slowing decomposition. This is why commercial bleach contains NaOH.",
+            "hazard_rise": "DANGER — corrosive and oxidising solution",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Highly corrosive mixture. Never acidify the solution to chlorine-release pH."
+        },
+        frozenset(["sodium hypochlorite", "sulfuric acid"]): {
+            "type":        "Extremely Dangerous Chlorine Gas Generation",
+            "equation":    "2NaOCl + 2H₂SO₄ → Cl₂↑ + 2NaHSO₄ + H₂O + ½O₂",
+            "conditions":  "Any acidic condition, room temperature",
+            "outcome":     "Releases chlorine gas, a toxic respiratory agent. Reaction is fast and exothermic.",
+            "hazard_rise": "EXTREME DANGER — toxic chlorine gas",
+            "temp":        "Exothermic — spontaneous",
+            "warning":     "🚨 NEVER mix bleach with strong acids. Evacuate and ventilate immediately if it occurs."
+        },
+        frozenset(["sodium hypochlorite", "acetic acid"]): {
+            "type":        "Hypochlorous Acid and Chlorine Release",
+            "equation":    "NaOCl + CH₃COOH → HOCl + CH₃COONa;  HOCl + HCl → Cl₂",
+            "conditions":  "Lowering pH below ~5, room temperature",
+            "outcome":     "Acidifying bleach generates hypochlorous acid and toxic chlorine gas, even with weak acids like vinegar.",
+            "hazard_rise": "DANGER — chlorine release",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Never mix bleach with vinegar or acidic cleaners."
+        },
+        frozenset(["sodium hypochlorite", "beta-mercaptoethanol"]): {
+            "type":        "Thiol Oxidation (Odour Destruction)",
+            "equation":    "2HOCH₂CH₂SH + NaOCl → HOCH₂CH₂S–SCH₂CH₂OH + NaCl + H₂O (further to sulfonic acids)",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Bleach oxidises the volatile thiol to odourless sulfonates. Used to decontaminate thiol spills.",
+            "hazard_rise": "WARNING — exothermic oxidation with possible chlorinated by-products",
+            "temp":        "Exothermic",
+            "warning":     "🔶 Use dilute bleach in a fume hood and add slowly."
+        },
+        frozenset(["sodium hypochlorite", "urea"]): {
+            "type":        "Chloramine Formation",
+            "equation":    "CO(NH₂)₂ + NaOCl → N-chlorourea → chloramines (NH₂Cl, NHCl₂, NCl₃ under acidic conditions)",
+            "conditions":  "Aqueous, room temperature; acidic pH is worst",
+            "outcome":     "Urea reacts with chlorine to form irritating chloramines. Basis of the indoor-pool 'chlorine smell'.",
+            "hazard_rise": "DANGER — toxic respiratory irritants",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Do not mix bleach with urea-containing waste. Provide ventilation."
+        },
+        frozenset(["sodium hypochlorite", "ammonium chloride"]): {
+            "type":        "Chloramine Formation",
+            "equation":    "NH₄⁺ + OCl⁻ → NH₂Cl + H₂O (further NHCl₂, NCl₃)",
+            "conditions":  "Aqueous, room temperature; fastest at near-neutral pH",
+            "outcome":     "Monochloramine and related toxic chloramine gases form quickly.",
+            "hazard_rise": "EXTREME DANGER — toxic chloramine gas",
+            "temp":        "Room temperature — immediate",
+            "warning":     "🚨 Never mix bleach with ammonium salts or ammonia-based cleaners."
+        },
+        frozenset(["sodium hypochlorite", "ascorbic acid"]): {
+            "type":        "Redox — Dechlorination",
+            "equation":    "OCl⁻ + C₆H₈O₆ → Cl⁻ + C₆H₆O₆ + OH⁻",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Ascorbic acid rapidly reduces hypochlorite to chloride, which is how chlorine residues are neutralised before water testing or cell culture.",
+            "hazard_rise": "SAFE — neutralises the oxidiser",
+            "temp":        "Mildly exothermic",
+            "warning":     "✅ Vitamin C is a safe neutraliser for chlorinated water samples."
+        },
+        frozenset(["sodium hypochlorite", "sodium bicarbonate"]): {
+            "type":        "Buffering — Dakin's-Type Solution",
+            "equation":    "NaOCl + NaHCO₃ → buffered hypochlorite (pH ~9)",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Bicarbonate buffers bleach to a gentler pH, improving tolerability for wound irrigation (Dakin's solution).",
+            "hazard_rise": "WARNING — oxidising antiseptic",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Solution degrades quickly. Prepare fresh and store in the dark."
+        },
+        frozenset(["sodium hypochlorite", "edta"]): {
+            "type":        "Oxidative Degradation of Chelator",
+            "equation":    "EDTA + OCl⁻ → degraded EDTA + Cl⁻ (loss of available chlorine)",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "EDTA rapidly consumes available chlorine, so the mixture loses disinfection power. Documented in endodontic irrigation.",
+            "hazard_rise": "WARNING — loss of antimicrobial activity",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Use bleach and EDTA sequentially with a saline rinse, not mixed together."
+        },
+        frozenset(["sodium hypochlorite", "guanidine hcl"]): {
+            "type":        "Hazardous Incompatibility — Toxic Gas Formation",
+            "equation":    "Guanidinium + OCl⁻ → reactive N-chloro compounds + toxic gases",
+            "conditions":  "Aqueous, especially under acidic conditions",
+            "outcome":     "Guanidine-containing lysis waste reacts with bleach to release toxic chlorinated nitrogen compounds and gases.",
+            "hazard_rise": "EXTREME DANGER — toxic gas release",
+            "temp":        "Room temperature",
+            "warning":     "🚨 Never add bleach to guanidine lysis waste. Collect it separately according to kit safety instructions."
+        },
+        frozenset(["sodium hypochlorite", "ethidium bromide"]): {
+            "type":        "Oxidative Degradation — Partial Decontamination",
+            "equation":    "Ethidium bromide + OCl⁻ → oxidised fragments (incomplete destruction)",
+            "conditions":  "Aqueous, room temperature, hours",
+            "outcome":     "Bleach destroys the fluorescence but reported mixtures can remain mutagenic, so it is not a reliable decontamination method.",
+            "hazard_rise": "DANGER — may leave mutagenic residues",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Do not rely on bleach to deactivate EtBr. Use charcoal filtration or a validated chemical protocol and dispose as hazardous waste."
+        },frozenset(["hydrogen peroxide", "sulfuric acid"]): {
+            "type":        "Piranha Solution (Caro's Acid Formation)",
+            "equation":    "H₂SO₄ + H₂O₂ ⇌ H₂SO₅ + H₂O",
+            "conditions":  "Concentrated acid with 30% H₂O₂ (typically 3:1), self-heating",
+            "outcome":     "Forms an extremely powerful oxidiser that destroys organic matter. Used to clean glassware and silicon wafers.",
+            "hazard_rise": "EXTREME DANGER — violent exotherm, can explode with organic solvents",
+            "temp":        "Self-heats above 100°C",
+            "warning":     "🚨 Never store in a closed container. Never add organic solvents such as acetone. Add peroxide to acid slowly, with face shield and heavy gloves."
+        },
+        frozenset(["hydrogen peroxide", "hydrochloric acid"]): {
+            "type":        "Oxidation of Chloride",
+            "equation":    "H₂O₂ + 2HCl → Cl₂ + 2H₂O",
+            "conditions":  "Concentrated HCl, room temperature, catalysed by metal ions",
+            "outcome":     "Peroxide slowly oxidises hydrochloric acid to chlorine gas, which is more rapid with concentrated reagents.",
+            "hazard_rise": "DANGER — chlorine gas evolution",
+            "temp":        "Room temperature; faster when warm",
+            "warning":     "⚠️ Use only in a fume hood. Avoid mixing concentrated stocks."
+        },
+        frozenset(["hydrogen peroxide", "dithiothreitol"]): {
+            "type":        "Thiol Oxidation",
+            "equation":    "DTT(SH)₂ + H₂O₂ → oxidised DTT (cyclic disulfide) + 2H₂O",
+            "conditions":  "Aqueous, pH 7–8, room temperature",
+            "outcome":     "DTT is rapidly consumed. It is sometimes used to quench excess peroxide after oxidative treatment.",
+            "hazard_rise": "WARNING — mild exotherm and sulfur odour",
+            "temp":        "Room temperature",
+            "warning":     "🔶 DTT inactivated by peroxide will no longer reduce disulfides. Prepare fresh stocks."
+        },
+        frozenset(["hydrogen peroxide", "beta-mercaptoethanol"]): {
+            "type":        "Thiol Oxidation",
+            "equation":    "2HOCH₂CH₂SH + H₂O₂ → HOCH₂CH₂S–SCH₂CH₂OH + 2H₂O",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "The thiol is oxidised to its disulfide, reducing odour. Concentrated mixtures can heat vigorously.",
+            "hazard_rise": "DANGER — exothermic reaction with toxic thiol",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Do not mix concentrated stocks. Work in a fume hood."
+        },
+        frozenset(["hydrogen peroxide", "sodium bicarbonate"]): {
+            "type":        "Peroxymonocarbonate Formation (Activated Peroxide)",
+            "equation":    "H₂O₂ + HCO₃⁻ ⇌ HCO₄⁻ + H₂O",
+            "conditions":  "Aqueous, pH 8–9, room temperature",
+            "outcome":     "Bicarbonate activates hydrogen peroxide into a stronger oxidant, used in sulfide and organic oxidation chemistry.",
+            "hazard_rise": "WARNING — stronger oxidising solution",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Activated peroxide can bleach dyes and oxidise proteins faster. Use freshly prepared solutions."
+        },
+        frozenset(["hydrogen peroxide", "urea"]): {
+            "type":        "Adduct Formation — Carbamide Peroxide",
+            "equation":    "CO(NH₂)₂ + H₂O₂ → CO(NH₂)₂·H₂O₂",
+            "conditions":  "Aqueous, room temperature, crystallises on concentration",
+            "outcome":     "A stable crystalline adduct (urea hydrogen peroxide) forms. It releases H₂O₂ on dissolution and is used in teeth whitening.",
+            "hazard_rise": "WARNING — solid oxidiser",
+            "temp":        "Room temperature; decomposes above ~60°C",
+            "warning":     "🔶 Keep away from reducing agents and heat. Store cold and dry."
+        },
+        frozenset(["hydrogen peroxide", "bovine serum albumin"]): {
+            "type":        "Protein Oxidation",
+            "equation":    "BSA–SH + H₂O₂ → BSA–SOH → BSA–SO₂H;  Met → Met-sulfoxide",
+            "conditions":  "Aqueous, physiological pH, room temperature",
+            "outcome":     "Free cysteine and methionine residues oxidise, changing structure and function. Models oxidative damage to proteins.",
+            "hazard_rise": "WARNING — loss of protein function",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Remove residual peroxide with catalase before functional assays."
+        },
+        frozenset(["hydrogen peroxide", "dopamine hcl"]): {
+            "type":        "Oxidation — Quinone Formation",
+            "equation":    "Dopamine + H₂O₂ → dopamine-quinone / aminochrome + H₂O",
+            "conditions":  "Aqueous, neutral to alkaline pH, metal ions accelerate",
+            "outcome":     "Dopamine oxidises to reactive quinones that polymerise to neuromelanin-like pigments (brown to black).",
+            "hazard_rise": "WARNING — reactive quinones and rapid degradation",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Add antioxidant (ascorbic acid) and EDTA to dopamine stocks."
+        },
+        frozenset(["hydrogen peroxide", "dmso"]): {
+            "type":        "Oxidation — Sulfoxide to Sulfone",
+            "equation":    "(CH₃)₂SO + H₂O₂ → (CH₃)₂SO₂ + H₂O",
+            "conditions":  "Room temperature to mild heating, catalysed by acid or metals",
+            "outcome":     "DMSO is oxidised to dimethyl sulfone. DMSO also scavenges hydroxyl radicals, so it quenches Fenton chemistry.",
+            "hazard_rise": "WARNING — exothermic with concentrated reagents",
+            "temp":        "Mildly exothermic",
+            "warning":     "🔶 Avoid concentrated peroxide with DMSO. DMSO also carries chemicals through skin."
+        },
+        frozenset(["hydrogen peroxide", "peg-400"]): {
+            "type":        "Oxidative Degradation of Polyether",
+            "equation":    "PEG–CH₂–O–CH₂ + H₂O₂/O₂ → peroxides, formaldehyde, formic acid",
+            "conditions":  "Room temperature to 40°C, trace metals and light accelerate",
+            "outcome":     "PEG autoxidises to aldehydes and peroxides that damage proteins and lower pH. Major excipient stability concern.",
+            "hazard_rise": "WARNING — reactive impurities in formulations",
+            "temp":        "Accelerated above 40°C",
+            "warning":     "🔶 Use fresh low-peroxide PEG and add antioxidants such as methionine or BHT."
+        },
+        frozenset(["sulfuric acid", "ethanol"]): {
+            "type":        "Dehydration / Esterification",
+            "equation":    "2C₂H₅OH →(H₂SO₄)→ (C₂H₅)₂O + H₂O (≈140°C);  C₂H₅OH → C₂H₄ + H₂O (≈170°C)",
+            "conditions":  "Concentrated H₂SO₄, elevated temperature",
+            "outcome":     "Produces diethyl ether or ethylene depending on temperature. Ethyl hydrogen sulfate forms in the cold.",
+            "hazard_rise": "EXTREME DANGER — extremely flammable ether vapour and a hot corrosive acid",
+            "temp":        "Exothermic on mixing; products form at 140–170°C",
+            "warning":     "🚨 Never heat ethanol with concentrated acid without proper apparatus. Always add acid to alcohol slowly in an ice bath."
+        },
+        frozenset(["sulfuric acid", "methanol"]): {
+            "type":        "Esterification — Methyl Hydrogen Sulfate",
+            "equation":    "CH₃OH + H₂SO₄ → CH₃OSO₃H + H₂O",
+            "conditions":  "Concentrated H₂SO₄, exothermic; heating forms ethers",
+            "outcome":     "Methyl hydrogen sulfate forms and toxic alkyl sulfates can arise on heating or distillation. The reaction is strongly exothermic.",
+            "hazard_rise": "EXTREME DANGER — toxic, flammable and corrosive",
+            "temp":        "Exothermic",
+            "warning":     "🚨 Methanol is toxic and flammable. Add acid slowly in a fume hood with cooling."
+        },
+        frozenset(["sulfuric acid", "sucrose"]): {
+            "type":        "Dehydration — Carbonisation",
+            "equation":    "C₁₂H₂₂O₁₁ →(H₂SO₄)→ 12C + 11H₂O",
+            "conditions":  "Concentrated H₂SO₄, room temperature",
+            "outcome":     "The sugar is dehydrated to a black carbon column, releasing steam, CO, CO₂ and SO₂ in an intense exotherm.",
+            "hazard_rise": "EXTREME DANGER — corrosive, hot, toxic gases",
+            "temp":        "Self-heating above 100°C",
+            "warning":     "🚨 Hot corrosive foam and toxic SO₂. Only do in a fume hood behind a shield."
+        },
+        frozenset(["sulfuric acid", "sodium chloride"]): {
+            "type":        "Acid Displacement — Hydrogen Chloride Gas",
+            "equation":    "NaCl + H₂SO₄ → NaHSO₄ + HCl↑",
+            "conditions":  "Concentrated H₂SO₄, room temperature or gentle heat",
+            "outcome":     "Hydrogen chloride gas is liberated. Fumes form dense white mist in humid air.",
+            "hazard_rise": "DANGER — corrosive HCl gas",
+            "temp":        "Room temperature, faster with warming",
+            "warning":     "⚠️ Fume hood mandatory. Never add concentrated acid to salt in a closed vessel."
+        },
+        frozenset(["sulfuric acid", "potassium iodide"]): {
+            "type":        "Redox — Iodide Oxidation by Concentrated Acid",
+            "equation":    "8KI + 9H₂SO₄ → 8KHSO₄ + 4I₂ + H₂S↑ + 4H₂O",
+            "conditions":  "Concentrated H₂SO₄",
+            "outcome":     "Iodide is oxidised to iodine while the acid is reduced to SO₂, S or toxic H₂S. A brown, foul-smelling mixture results.",
+            "hazard_rise": "EXTREME DANGER — H₂S and SO₂ release",
+            "temp":        "Exothermic",
+            "warning":     "🚨 Hydrogen sulfide is acutely toxic. Fume hood is essential."
+        },
+        frozenset(["sulfuric acid", "sodium bicarbonate"]): {
+            "type":        "Acid-Carbonate Effervescence",
+            "equation":    "2NaHCO₃ + H₂SO₄ → Na₂SO₄ + 2H₂O + 2CO₂↑",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Vigorous CO₂ evolution and heat. Used to neutralise acid spills.",
+            "hazard_rise": "DANGER during mixing → SAFE after neutralisation",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Add bicarbonate slowly; splash risk from foaming."
+        },
+        frozenset(["sulfuric acid", "acetonitrile"]): {
+            "type":        "Acid Hydrolysis of Nitrile",
+            "equation":    "CH₃CN + 2H₂O + H₂SO₄ → CH₃COOH + NH₄HSO₄",
+            "conditions":  "Concentrated or hot aqueous acid",
+            "outcome":     "Acetonitrile hydrolyses to acetic acid and ammonium sulfate, with heat release.",
+            "hazard_rise": "DANGER — flammable toxic solvent and corrosive acid",
+            "temp":        "Exothermic; faster when heated",
+            "warning":     "⚠️ Never mix concentrated acid with waste acetonitrile. Heat and pressure may build."
+        },
+        frozenset(["sulfuric acid", "formaldehyde"]): {
+            "type":        "Acid-Catalysed Polymerisation",
+            "equation":    "n HCHO →(H⁺)→ (CH₂O)ₙ (paraformaldehyde) / trioxane",
+            "conditions":  "Concentrated acid, room temperature to mild heating",
+            "outcome":     "Formaldehyde polymerises to solid polyoxymethylene or cyclic trioxane, releasing heat.",
+            "hazard_rise": "DANGER — toxic vapours and exotherm",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Do not add acid directly to concentrated formalin. Work in a fume hood."
+        },
+        frozenset(["sulfuric acid", "acetone"]): {
+            "type":        "Acid-Catalysed Aldol Condensation",
+            "equation":    "2CH₃COCH₃ →(H⁺)→ mesityl oxide + H₂O → condensation products",
+            "conditions":  "Concentrated acid, exothermic",
+            "outcome":     "Acetone condenses to mesityl oxide and higher coloured resins, releasing heat.",
+            "hazard_rise": "DANGER — flammable solvent with exothermic reaction",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Never mix acid waste with acetone waste. Pressure and heat build up in sealed bottles."
+        },
+        frozenset(["sulfuric acid", "phenol"]): {
+            "type":        "Electrophilic Aromatic Sulfonation",
+            "equation":    "C₆H₅OH + H₂SO₄ → HO–C₆H₄–SO₃H + H₂O",
+            "conditions":  "Concentrated acid, elevated temperature (≈100°C)",
+            "outcome":     "Phenolsulfonic acids form. At lower temperature the ortho isomer dominates; at higher temperature the para isomer.",
+            "hazard_rise": "EXTREME DANGER — corrosive and toxic mixture",
+            "temp":        "Requires heating ≈100°C",
+            "warning":     "🚨 Phenol burns can be fatal by skin absorption. Use full PPE and fume hood."
+        },
+        frozenset(["sulfuric acid", "potassium hydroxide"]): {
+            "type":        "Strong Acid-Base Neutralisation",
+            "equation":    "H₂SO₄ + 2KOH → K₂SO₄ + 2H₂O",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Potassium sulfate and water form with a violent exotherm if concentrated.",
+            "hazard_rise": "EXTREME DANGER during mixing → SAFE after neutralisation",
+            "temp":        "Highly exothermic — can boil and spatter",
+            "warning":     "🚨 Dilute both reagents first and add slowly with an ice bath."
+        },
+        frozenset(["sulfuric acid", "glycerol"]): {
+            "type":        "Dehydration — Acrolein Formation",
+            "equation":    "C₃H₈O₃ →(H₂SO₄, heat)→ CH₂=CH–CHO + 2H₂O",
+            "conditions":  "Concentrated acid, heating above ≈150°C",
+            "outcome":     "Glycerol dehydrates to acrolein, an acutely toxic, lachrymatory vapour.",
+            "hazard_rise": "EXTREME DANGER — toxic acrolein vapour",
+            "temp":        "Requires heating above ≈150°C",
+            "warning":     "🚨 Never heat glycerol with strong acid or dehydrating agents outside a hood."
+        },
+        frozenset(["sulfuric acid", "triethanolamine"]): {
+            "type":        "Salt Formation",
+            "equation":    "N(CH₂CH₂OH)₃ + H₂SO₄ → [HN(CH₂CH₂OH)₃]⁺HSO₄⁻",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Triethanolammonium sulfate forms with heat release. Used to prepare pH-adjusted amine salts.",
+            "hazard_rise": "DANGER during mixing — corrosive",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Add acid slowly to diluted amine."
+        },
+        frozenset(["sulfuric acid", "urea"]): {
+            "type":        "Salt Formation / Hydrolysis",
+            "equation":    "CO(NH₂)₂ + H₂SO₄ → [CO(NH₂)₂·H]⁺ HSO₄⁻ (urea sulfate)",
+            "conditions":  "Aqueous, room temperature; hydrolyses to NH₄⁺ and CO₂ on heating",
+            "outcome":     "Urea is protonated to form urea sulfate. Prolonged heating hydrolyses it to ammonium sulfate.",
+            "hazard_rise": "DANGER — corrosive solution",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Avoid heating the mixture; ammonium salts and CO₂ evolve."
+        },
+        frozenset(["hydrochloric acid", "triethanolamine"]): {
+            "type":        "Buffer Preparation — TEA–HCl",
+            "equation":    "N(CH₂CH₂OH)₃ + HCl → [HN(CH₂CH₂OH)₃]⁺Cl⁻",
+            "conditions":  "Aqueous, pH adjusted to 7.0–8.5",
+            "outcome":     "Forms triethanolamine hydrochloride buffer (pKa ≈ 7.8) used in enzyme assays.",
+            "hazard_rise": "WARNING — corrosive acid used during preparation",
+            "temp":        "Mildly exothermic",
+            "warning":     "🔶 Add HCl slowly while monitoring pH."
+        },
+        frozenset(["hydrochloric acid", "histidine"]): {
+            "type":        "Buffer Preparation — Histidine–HCl",
+            "equation":    "His + HCl → His·HCl (imidazole protonation)",
+            "conditions":  "Aqueous, target pH 5.5–6.5",
+            "outcome":     "Histidine–HCl is the most common buffer for monoclonal antibody formulations.",
+            "hazard_rise": "SAFE — standard pharmaceutical buffering",
+            "temp":        "Room temperature",
+            "warning":     "✅ Typical formulation uses 10–30 mM histidine at pH 6.0."
+        },
+        frozenset(["hydrochloric acid", "l-arginine"]): {
+            "type":        "Salt Formation — Arginine Hydrochloride",
+            "equation":    "Arg + HCl → Arg·HCl",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Arginine–HCl forms, a common excipient that reduces protein aggregation and viscosity.",
+            "hazard_rise": "SAFE — widely used pharmaceutical salt",
+            "temp":        "Room temperature",
+            "warning":     "✅ Standard stabiliser and solubility enhancer in biologics."
+        },
+        frozenset(["hydrochloric acid", "ammonium bicarbonate"]): {
+            "type":        "Acid-Carbonate Effervescence",
+            "equation":    "NH₄HCO₃ + HCl → NH₄Cl + H₂O + CO₂↑",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "CO₂ is released and ammonium chloride forms. The volatile buffer is lost.",
+            "hazard_rise": "WARNING — corrosive acid with foaming",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Quench digests with acid slowly to avoid foaming."
+        },
+        frozenset(["hydrochloric acid", "dimethylformamide"]): {
+            "type":        "Acid Hydrolysis of Amide",
+            "equation":    "HCON(CH₃)₂ + H₂O + HCl → HCOOH + (CH₃)₂NH₂⁺Cl⁻",
+            "conditions":  "Aqueous acid, elevated temperature",
+            "outcome":     "DMF hydrolyses to formic acid and dimethylammonium chloride on heating.",
+            "hazard_rise": "DANGER — DMF is a reproductive toxin; corrosive acid",
+            "temp":        "Requires heating; slow at room temperature",
+            "warning":     "⚠️ Do not heat acidified DMF in sealed containers. Fume hood mandatory."
+        },
+        frozenset(["hydrochloric acid", "agar"]): {
+            "type":        "Acid Hydrolysis of Polysaccharide",
+            "equation":    "Agarose chain + H₂O →(H⁺, heat)→ shorter oligosaccharides",
+            "conditions":  "pH < 5 with autoclaving",
+            "outcome":     "Acid and heat cleave the agar polymer, so plates fail to gel properly.",
+            "hazard_rise": "SAFE — experimental failure rather than a safety hazard",
+            "temp":        "Accelerated during autoclaving",
+            "warning":     "✅ Add acid or acidic additives after autoclaving and cooling to 50°C."
+        },
+        frozenset(["hydrochloric acid", "saponin"]): {
+            "type":        "Acid Hydrolysis of Glycoside",
+            "equation":    "Saponin + H₂O →(H⁺, heat)→ sapogenin (aglycone) + sugars",
+            "conditions":  "2 M HCl, 80–100°C",
+            "outcome":     "Sugar chains are cleaved, leaving a hydrophobic sapogenin that has lost its detergent properties.",
+            "hazard_rise": "WARNING — corrosive hot acid",
+            "temp":        "80–100°C",
+            "warning":     "🔶 Neutralise before disposal."
+        },
+        frozenset(["hydrochloric acid", "folic acid"]): {
+            "type":        "Acid Precipitation",
+            "equation":    "Folate (soluble salt) + H⁺ → folic acid↓",
+            "conditions":  "pH below ≈4, room temperature",
+            "outcome":     "Folic acid is poorly soluble in acid and precipitates as a yellow solid.",
+            "hazard_rise": "SAFE — solubility problem",
+            "temp":        "Room temperature",
+            "warning":     "✅ Keep folate stocks neutral to alkaline and protected from light."
+        },
+        frozenset(["hydrochloric acid", "edta"]): {
+            "type":        "Acid Precipitation of Free Acid",
+            "equation":    "Na₄EDTA + 4HCl → H₄EDTA↓ + 4NaCl",
+            "conditions":  "Aqueous, pH below ≈2",
+            "outcome":     "EDTA free acid is poorly soluble and precipitates when stocks are acidified.",
+            "hazard_rise": "WARNING — corrosive acid",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Acidify EDTA solutions only for specific protocols."
+        },
+        frozenset(["hydrochloric acid", "bovine serum albumin"]): {
+            "type":        "Acid-Induced Protein Unfolding",
+            "equation":    "BSA (native, pH 7) → BSA (fast form, pH 4) → BSA (expanded, pH < 3.5)",
+            "conditions":  "Aqueous, pH < 4.5",
+            "outcome":     "Albumin undergoes the N–F transition, expands and aggregates near its isoelectric point (pH ≈ 4.7).",
+            "hazard_rise": "WARNING — denaturation of protein",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Acidify slowly with stirring and neutralise promptly."
+        },
+        frozenset(["hydrochloric acid", "sucrose"]): {
+            "type":        "Acid Hydrolysis — Sucrose Inversion",
+            "equation":    "C₁₂H₂₂O₁₁ + H₂O →(H⁺)→ glucose + fructose",
+            "conditions":  "Acidic aqueous, heating accelerates",
+            "outcome":     "Sucrose hydrolyses into invert sugar, which is reducing and prone to Maillard browning.",
+            "hazard_rise": "WARNING — reducing sugars can glycate proteins",
+            "temp":        "Accelerated by heat",
+            "warning":     "🔶 Do not store sucrose formulations below pH 4 if they contain proteins."
+        },
+        frozenset(["hydrochloric acid", "tetracycline"]): {
+            "type":        "Acid Degradation — Anhydrotetracycline",
+            "equation":    "Tetracycline →(strong acid)→ anhydrotetracycline + H₂O",
+            "conditions":  "pH below 2, heating or prolonged storage",
+            "outcome":     "A toxic degradation product forms. Epimers also form around pH 3–5.",
+            "hazard_rise": "DANGER — toxic degradation product",
+            "temp":        "Accelerated by heat",
+            "warning":     "⚠️ Discard acidified or aged tetracycline solutions."
+        },
+        frozenset(["hydrochloric acid", "bromophenol blue"]): {
+            "type":        "Indicator Colour Change",
+            "equation":    "BPB (blue, pH 4.6) + H⁺ → BPB (yellow, pH 3.0)",
+            "conditions":  "Aqueous, room temperature, reversible",
+            "outcome":     "Bromophenol blue turns from blue to yellow as the pH drops below about 3.",
+            "hazard_rise": "SAFE — indicator reaction",
+            "temp":        "Room temperature",
+            "warning":     "✅ A yellow loading dye indicates an acidic sample."
+        },
+        frozenset(["potassium hydroxide", "ethanol"]): {
+            "type":        "Alkoxide Formation (Alcoholic KOH)",
+            "equation":    "C₂H₅OH + KOH ⇌ C₂H₅OK + H₂O",
+            "conditions":  "Ethanol solvent, room temperature",
+            "outcome":     "A strongly basic solution used for saponification and glassware 'base baths', capable of etching glass.",
+            "hazard_rise": "DANGER — corrosive and flammable",
+            "temp":        "Mildly exothermic on dissolving",
+            "warning":     "⚠️ Do not leave glassware in base baths for long periods. Wear face shield and gloves."
+        },
+        frozenset(["potassium hydroxide", "chloroform"]): {
+            "type":        "Dichlorocarbene Generation",
+            "equation":    "CHCl₃ + KOH → :CCl₂ + KCl + H₂O",
+            "conditions":  "Strong base, room temperature, vigorous mixing",
+            "outcome":     "Reactive dichlorocarbene forms and goes on to degrade to formate and chloride, with strong heat release.",
+            "hazard_rise": "DANGER — toxic reactive intermediates",
+            "temp":        "Exothermic",
+            "warning":     "⚠️ Never mix chloroform waste with strong bases. Fume hood mandatory."
+        },
+        frozenset(["potassium hydroxide", "phenol"]): {
+            "type":        "Acid-Base — Phenoxide Formation",
+            "equation":    "C₆H₅OH + KOH → C₆H₅OK + H₂O",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Potassium phenoxide forms and is more water soluble. It remains corrosive and toxic.",
+            "hazard_rise": "DANGER — corrosive and toxic mixture",
+            "temp":        "Mildly exothermic",
+            "warning":     "⚠️ Phenol and strong base mixtures penetrate skin rapidly. Use full PPE."
+        },
+        frozenset(["potassium hydroxide", "acetic acid"]): {
+            "type":        "Acid-Base Neutralisation",
+            "equation":    "CH₃COOH + KOH → CH₃COOK + H₂O",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Potassium acetate forms, a common buffer component and RNA/DNA precipitation salt.",
+            "hazard_rise": "WARNING → SAFE after neutralisation",
+            "temp":        "Exothermic",
+            "warning":     "🔶 Add KOH slowly with stirring to control heat."
+        },
+        frozenset(["sodium hydroxide", "agarose"]): {
+            "type":        "Alkaline Gel Chemistry",
+            "equation":    "Agarose gel + OH⁻ → DNA denaturation conditions (no gel degradation at 30–50 mM)",
+            "conditions":  "30–50 mM NaOH, 1 mM EDTA, room temperature",
+            "outcome":     "Alkaline agarose gels keep DNA single-stranded for size analysis. Hot concentrated base degrades the gel.",
+            "hazard_rise": "WARNING — corrosive buffer",
+            "temp":        "Room temperature; do not heat",
+            "warning":     "🔶 Neutralise the gel before staining or Southern blotting."
+        },
+        frozenset(["sodium hydroxide", "acrylamide"]): {
+            "type":        "Amide Hydrolysis",
+            "equation":    "CH₂=CHCONH₂ + NaOH → CH₂=CHCOONa + NH₃",
+            "conditions":  "Alkaline aqueous, elevated temperature or long storage",
+            "outcome":     "Acrylamide hydrolyses to acrylate and ammonia, which makes gels more negatively charged.",
+            "hazard_rise": "DANGER — neurotoxic monomer, ammonia release",
+            "temp":        "Accelerated by heat",
+            "warning":     "⚠️ Use acrylamide solutions at neutral pH and store at 4°C in the dark."
+        },
+        frozenset(["sodium hydroxide", "polysorbate 80"]): {
+            "type":        "Saponification of Ester",
+            "equation":    "Sorbitan/PEG oleate ester + NaOH → sodium oleate + polyol",
+            "conditions":  "Alkaline aqueous, room temperature or heating",
+            "outcome":     "The ester bonds hydrolyse, giving soap and polyol fragments that destroy the surfactant's effects.",
+            "hazard_rise": "WARNING — loss of surfactant function",
+            "temp":        "Accelerated by heat",
+            "warning":     "🔶 Keep polysorbate formulations near neutral pH."
+        },
+        frozenset(["sodium hydroxide", "urea"]): {
+            "type":        "Base Hydrolysis",
+            "equation":    "CO(NH₂)₂ + 2NaOH → Na₂CO₃ + 2NH₃↑",
+            "conditions":  "Concentrated NaOH, heating",
+            "outcome":     "Urea hydrolyses to carbonate and ammonia. Prolonged storage generates cyanate and carbamylates proteins.",
+            "hazard_rise": "DANGER — ammonia gas release",
+            "temp":        "Requires heating; slow at room temperature",
+            "warning":     "⚠️ Do not heat alkaline urea solutions."
+        },
+        frozenset(["sodium hydroxide", "edta"]): {
+            "type":        "Dissolution — Sodium Salt Formation",
+            "equation":    "H₄EDTA + 3NaOH → Na₃HEDTA + 3H₂O",
+            "conditions":  "Aqueous, room temperature, pH raised to ≈8",
+            "outcome":     "EDTA free acid only dissolves once the pH is raised near 8. This is how 0.5 M EDTA stock is prepared.",
+            "hazard_rise": "WARNING — corrosive base",
+            "temp":        "Mildly exothermic",
+            "warning":     "🔶 Add NaOH pellets slowly with stirring."
+        },
+        frozenset(["sodium hydroxide", "dopamine hcl"]): {
+            "type":        "Autoxidation — Polydopamine Formation",
+            "equation":    "Dopamine + O₂ →(pH > 8)→ dopamine-quinone → polydopamine",
+            "conditions":  "Alkaline aqueous, oxygen present",
+            "outcome":     "Dopamine turns pink, brown and finally black as it polymerises. The polymer coats surfaces.",
+            "hazard_rise": "WARNING — rapid compound degradation",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Keep dopamine acidic if you need a stable stock."
+        },
+        frozenset(["sodium hydroxide", "ascorbic acid"]): {
+            "type":        "Neutralisation then Oxidative Degradation",
+            "equation":    "C₆H₈O₆ + NaOH → sodium ascorbate + H₂O (→ dehydroascorbate → diketogulonate)",
+            "conditions":  "Aqueous, alkaline pH, air exposure",
+            "outcome":     "Ascorbate forms first and is rapidly destroyed at high pH, going brown.",
+            "hazard_rise": "WARNING — rapid loss of antioxidant activity",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Prepare ascorbate solutions fresh near neutral pH."
+        },
+        frozenset(["sodium hydroxide", "ammonium sulfate"]): {
+            "type":        "Ammonia Release",
+            "equation":    "(NH₄)₂SO₄ + 2NaOH → Na₂SO₄ + 2NH₃↑ + 2H₂O",
+            "conditions":  "Aqueous, room temperature; faster with heat",
+            "outcome":     "Ammonia gas is liberated, which is irritating and toxic.",
+            "hazard_rise": "DANGER — ammonia gas",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Do not neutralise protein precipitation waste with strong base in an unventilated area."
+        },
+        frozenset(["sodium hydroxide", "ampicillin"]): {
+            "type":        "β-Lactam Hydrolysis",
+            "equation":    "Ampicillin + OH⁻ → ampicilloic acid (inactive)",
+            "conditions":  "Alkaline aqueous, room temperature",
+            "outcome":     "The β-lactam ring opens rapidly, giving an inactive antibiotic that can trigger allergic reactions.",
+            "hazard_rise": "WARNING — loss of antibiotic activity",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Never dissolve ampicillin in alkaline buffers."
+        },
+        frozenset(["sodium hydroxide", "streptomycin"]): {
+            "type":        "Alkaline Degradation — Maltol Formation",
+            "equation":    "Streptomycin + OH⁻ → maltol + streptidine fragments",
+            "conditions":  "Alkaline aqueous, heating",
+            "outcome":     "The streptose sugar is converted to maltol, the basis of the classic maltol test using ferric ions.",
+            "hazard_rise": "WARNING — loss of antibiotic activity",
+            "temp":        "Accelerated by heat",
+            "warning":     "🔶 Use streptomycin at neutral pH."
+        },
+        frozenset(["methanol", "formaldehyde"]): {
+            "type":        "Hemiacetal Formation (Formalin Stabilisation)",
+            "equation":    "HCHO + CH₃OH ⇌ CH₃OCH₂OH",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Methanol (10–15%) in commercial formalin stabilises formaldehyde against polymerisation.",
+            "hazard_rise": "DANGER — toxic and flammable",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Methanol-stabilised formalin is toxic and flammable. Use in a hood."
+        },
+        frozenset(["formaldehyde", "tris buffer"]): {
+            "type":        "Amine Quenching",
+            "equation":    "HCHO + Tris–NH₂ → Tris–N=CH₂ / oxazolidine adducts",
+            "conditions":  "Aqueous, pH 7–8, room temperature",
+            "outcome":     "Tris scavenges free formaldehyde and is used to stop cross-linking reactions.",
+            "hazard_rise": "WARNING — formaldehyde remains hazardous until fully quenched",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Do not use Tris as the buffer during fixation."
+        },
+        frozenset(["formaldehyde", "phenol"]): {
+            "type":        "Phenol–Formaldehyde Condensation",
+            "equation":    "C₆H₅OH + HCHO → hydroxymethylphenols → phenolic resin (Bakelite)",
+            "conditions":  "Acid or base catalyst, heating",
+            "outcome":     "Cross-linked resin forms with strong exotherm. Uncontrolled runaway can occur.",
+            "hazard_rise": "EXTREME DANGER — two toxic reagents and a runaway-capable reaction",
+            "temp":        "Exothermic; runaway risk",
+            "warning":     "🚨 Never combine phenol and formaldehyde waste."
+        },
+        frozenset(["formaldehyde", "urea"]): {
+            "type":        "Condensation — Urea–Formaldehyde Resin",
+            "equation":    "CO(NH₂)₂ + HCHO → methylolureas → urea–formaldehyde polymer",
+            "conditions":  "Neutral to mildly basic then acidic, mild heating",
+            "outcome":     "Methylolureas form and polymerise to an insoluble resin. Formaldehyde fixative loses strength when mixed with urea.",
+            "hazard_rise": "WARNING — formaldehyde-releasing polymer",
+            "temp":        "Mild heating accelerates",
+            "warning":     "🔶 Keep urea out of formaldehyde fixatives."
+        },
+        frozenset(["glutaraldehyde", "tris buffer"]): {
+            "type":        "Amine Quenching",
+            "equation":    "OHC–(CH₂)₃–CHO + Tris–NH₂ → Schiff base adducts",
+            "conditions":  "Aqueous, pH 7–8, room temperature",
+            "outcome":     "Tris consumes glutaraldehyde, so fixation fails. Use Tris only to stop cross-linking.",
+            "hazard_rise": "WARNING — reactive aldehyde remains until fully quenched",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Use HEPES or phosphate buffers, not Tris, for glutaraldehyde fixation."
+        },
+        frozenset(["glutaraldehyde", "bovine serum albumin"]): {
+            "type":        "Protein Cross-Linking",
+            "equation":    "BSA–NH₂ + OHC–(CH₂)₃–CHO + H₂N–BSA → BSA–N=CH–…–CH=N–BSA",
+            "conditions":  "Aqueous, pH 7–8, room temperature",
+            "outcome":     "Lysine amines cross-link, producing BSA hydrogels, nanoparticles and enzyme carriers.",
+            "hazard_rise": "DANGER — glutaraldehyde is a respiratory sensitiser",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Use in a fume hood. Quench with Tris or glycine afterward."
+        },
+        frozenset(["sodium dodecyl sulfate", "proteinase k"]): {
+            "type":        "Enzyme Activity in Detergent",
+            "equation":    "Protein + Proteinase K (+ SDS) → peptides",
+            "conditions":  "50–65°C, up to 1% SDS, pH 7.5–8",
+            "outcome":     "Proteinase K remains active in SDS, which makes it ideal for lysing tissues and removing nucleases during DNA extraction.",
+            "hazard_rise": "SAFE — standard lysis condition",
+            "temp":        "50–65°C",
+            "warning":     "✅ Inactivate by heating at 95°C or by phenol extraction."
+        },
+        frozenset(["sodium dodecyl sulfate", "bovine serum albumin"]): {
+            "type":        "Protein Denaturation by Detergent",
+            "equation":    "BSA + n SDS → BSA–SDS complexes (≈1.4 g SDS / g protein)",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "SDS unfolds and coats albumin with negative charge, as in SDS-PAGE.",
+            "hazard_rise": "WARNING — protein denaturation",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Do not use SDS in native assays."
+        },
+        frozenset(["sodium dodecyl sulfate", "guanidine hcl"]): {
+            "type":        "Precipitation — Guanidinium Dodecyl Sulfate",
+            "equation":    "C(NH₂)₃⁺ + C₁₂H₂₅OSO₃⁻ → guanidinium dodecyl sulfate↓",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "A sparingly soluble salt precipitates, removing SDS and guanidine from solution and clogging pipette tips.",
+            "hazard_rise": "WARNING — assay failure",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Do not combine SDS and guanidine buffers."
+        },
+        frozenset(["sodium dodecyl sulfate", "methylene blue"]): {
+            "type":        "Ion-Pair Formation (MBAS Assay)",
+            "equation":    "MB⁺ + C₁₂H₂₅OSO₃⁻ → [MB⁺][DS⁻] (blue ion pair, chloroform-extractable)",
+            "conditions":  "Alkaline aqueous, extraction into chloroform",
+            "outcome":     "Anionic surfactants form a blue complex that extracts into chloroform, the standard method for anionic detergents.",
+            "hazard_rise": "DANGER — chloroform is used for extraction",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Chloroform extraction requires a fume hood."
+        },
+        frozenset(["triton x-100", "sodium dodecyl sulfate"]): {
+            "type":        "Mixed Micelle Formation",
+            "equation":    "Triton X-100 + SDS → mixed micelles",
+            "conditions":  "Aqueous, room temperature, Triton in excess",
+            "outcome":     "Non-ionic detergent sequesters SDS, reducing its inhibitory effects on enzymes and antibody binding.",
+            "hazard_rise": "SAFE — widely used handling step",
+            "temp":        "Room temperature",
+            "warning":     "✅ Use roughly a 2–10-fold molar excess of Triton over SDS."
+        },
+        frozenset(["bovine serum albumin", "trichloroacetic acid"]): {
+            "type":        "Acid Precipitation of Protein",
+            "equation":    "BSA (soluble) + CCl₃COOH → BSA↓ (denatured)",
+            "conditions":  "10–20% TCA, on ice",
+            "outcome":     "Albumin precipitates and can be pelleted, concentrating the protein and removing salts and small molecules.",
+            "hazard_rise": "DANGER — TCA is highly corrosive",
+            "temp":        "0–4°C",
+            "warning":     "⚠️ Wash pellets with cold acetone to remove acid."
+        },
+        frozenset(["bovine serum albumin", "dithiothreitol"]): {
+            "type":        "Disulfide Reduction",
+            "equation":    "BSA–S–S–BSA + DTT(SH)₂ → 2 BSA–SH + oxidised DTT",
+            "conditions":  "Aqueous, pH 7–8.5, room temperature to 56°C",
+            "outcome":     "All 17 disulfide bonds of albumin are reduced, and the unfolded protein migrates anomalously in gels.",
+            "hazard_rise": "WARNING — structural loss",
+            "temp":        "Room temperature to 56°C",
+            "warning":     "🔶 Add an alkylating agent after reduction to prevent re-oxidation."
+        },
+        frozenset(["bovine serum albumin", "ethanol"]): {
+            "type":        "Solvent Precipitation (Cohn Fractionation)",
+            "equation":    "BSA (aq) + EtOH → BSA↓ (dehydration)",
+            "conditions":  "40% ethanol at −5°C, pH ≈ 4.8",
+            "outcome":     "Albumin is precipitated as Fraction V in classical plasma fractionation.",
+            "hazard_rise": "WARNING — flammable solvent",
+            "temp":        "Sub-zero temperature",
+            "warning":     "🔶 Keep cold. Warm ethanol denatures the protein."
+        },
+        frozenset(["proteinase k", "urea"]): {
+            "type":        "Enzyme Activity in Chaotrope",
+            "equation":    "Protein + Proteinase K (+ urea) → peptides",
+            "conditions":  "Up to ≈4 M urea, 37–50°C",
+            "outcome":     "Proteinase K tolerates denaturants, so it can digest tightly folded proteins that other proteases cannot.",
+            "hazard_rise": "SAFE — routine digestion condition",
+            "temp":        "37–50°C",
+            "warning":     "✅ Keep urea at or below 37°C when possible to avoid carbamylation."
+        },
+        frozenset(["urea", "beta-mercaptoethanol"]): {
+            "type":        "Denaturation and Reduction",
+            "equation":    "Urea unfolds protein; BME reduces disulfide bonds",
+            "conditions":  "8–9.5 M urea, 1–5% BME, room temperature",
+            "outcome":     "Complete protein solubilisation, as in O'Farrell lysis for 2D electrophoresis.",
+            "hazard_rise": "DANGER — toxic, odorous thiol",
+            "temp":        "Room temperature — never heat urea",
+            "warning":     "⚠️ Prepare fresh. Fume hood mandatory."
+        },
+        frozenset(["urea", "lithium chloride"]): {
+            "type":        "RNA Isolation Reagent (LiCl–Urea)",
+            "equation":    "RNA (insoluble in LiCl–urea) vs DNA and protein (soluble)",
+            "conditions":  "3 M LiCl, 6 M urea, 4°C overnight",
+            "outcome":     "RNA selectively precipitates and DNA and protein stay dissolved. Classic method for RNA from tissues.",
+            "hazard_rise": "WARNING — chaotropic mixture",
+            "temp":        "0–4°C",
+            "warning":     "🔶 Keep cold. Dispose of LiCl waste according to local rules."
+        },
+        frozenset(["guanidine hcl", "ethanol"]): {
+            "type":        "Silica-Binding Conditions",
+            "equation":    "DNA/RNA + GuHCl + EtOH → nucleic acid adsorbed on silica",
+            "conditions":  "High chaotrope plus 35–70% ethanol",
+            "outcome":     "Chaotrope plus ethanol drives nucleic acids to bind silica membranes, the basis of column kits.",
+            "hazard_rise": "WARNING — flammable, chaotropic mixture",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Never add bleach to guanidine-containing waste."
+        },
+        frozenset(["methylene blue", "glucose"]): {
+            "type":        "Redox Cycle — Blue Bottle Reaction",
+            "equation":    "MB (blue) + glucose + OH⁻ → leuco-MB (colourless) + gluconate;  leuco-MB + O₂ → MB",
+            "conditions":  "Alkaline aqueous, gentle shaking re-oxidises",
+            "outcome":     "The solution cycles between blue and colourless as oxygen is added and consumed.",
+            "hazard_rise": "SAFE — dilute classroom demonstration",
+            "temp":        "Room temperature",
+            "warning":     "✅ Use dilute solutions and avoid skin contact with alkaline mixture."
+        },
+        frozenset(["ammonium persulfate", "potassium iodide"]): {
+            "type":        "Redox — Iodine Clock Reaction",
+            "equation":    "S₂O₈²⁻ + 2I⁻ → 2SO₄²⁻ + I₂",
+            "conditions":  "Aqueous, room temperature; rate depends on concentration",
+            "outcome":     "Iodine is liberated; adding thiosulfate and starch gives the classic timed colour change.",
+            "hazard_rise": "WARNING — oxidiser, iodine release",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Persulfate is a skin sensitiser. Avoid dust and spills."
+        },
+        frozenset(["ammonium persulfate", "ascorbic acid"]): {
+            "type":        "Redox Initiator Pair",
+            "equation":    "S₂O₈²⁻ + C₆H₈O₆ → SO₄•⁻ + SO₄²⁻ + dehydroascorbate",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Free radicals form quickly and can initiate acrylamide polymerisation without TEMED. Ascorbate is consumed.",
+            "hazard_rise": "WARNING — radical oxidation",
+            "temp":        "Mildly exothermic",
+            "warning":     "🔶 Mix just before use."
+        },
+        frozenset(["acrylamide", "beta-mercaptoethanol"]): {
+            "type":        "Thiol Michael Addition",
+            "equation":    "CH₂=CHCONH₂ + HSCH₂CH₂OH → HOCH₂CH₂S–CH₂CH₂CONH₂",
+            "conditions":  "Aqueous, pH > 7, room temperature",
+            "outcome":     "The thiol adds to acrylamide's double bond, consuming both reagents and producing an adduct that can modify proteins.",
+            "hazard_rise": "DANGER — neurotoxic monomer and toxic thiol",
+            "temp":        "Room temperature",
+            "warning":     "⚠️ Neutralise acrylamide waste before disposal. Fume hood required."
+        },
+        frozenset(["dithiothreitol", "edta"]): {
+            "type":        "Stabilisation by Metal Chelation",
+            "equation":    "EDTA + trace Cu²⁺/Fe³⁺ → [M–EDTA] (prevents metal-catalysed DTT oxidation)",
+            "conditions":  "Aqueous, pH 7–8, room temperature",
+            "outcome":     "EDTA removes catalytic metals, extending the half-life of DTT and other thiols in buffers.",
+            "hazard_rise": "SAFE — protective combination",
+            "temp":        "Room temperature",
+            "warning":     "✅ Include 1 mM EDTA in DTT-containing buffers."
+        },
+        frozenset(["dopamine hcl", "tris buffer"]): {
+            "type":        "Michael Addition — Tris Incorporation in Polydopamine",
+            "equation":    "Dopamine-quinone + Tris–NH₂ → Tris–dopamine adducts",
+            "conditions":  "pH 8.5, oxygen present, room temperature",
+            "outcome":     "Tris reacts with oxidised dopamine, forming a polydopamine coating that incorporates Tris and changes surface properties.",
+            "hazard_rise": "SAFE — standard coating chemistry",
+            "temp":        "Room temperature",
+            "warning":     "✅ Tris is the standard polydopamine coating buffer; prepare fresh."
+        },
+        frozenset(["citric acid", "sodium phosphate"]): {
+            "type":        "Buffer Preparation — McIlvaine Citrate–Phosphate",
+            "equation":    "H₃Cit + HPO₄²⁻ ⇌ H₂Cit⁻ + H₂PO₄⁻ (buffering across pH 2.2–8.0)",
+            "conditions":  "Aqueous, adjusted by ratio",
+            "outcome":     "McIlvaine buffer covers an unusually wide pH range. Dibasic sodium phosphate is used in practice.",
+            "hazard_rise": "SAFE — standard buffer",
+            "temp":        "Room temperature",
+            "warning":     "✅ Citrate chelates calcium and metal ions, which can interfere with some assays."
+        },
+        frozenset(["mannitol", "boric acid"]): {
+            "type":        "Complexation — Borate–Polyol Ester",
+            "equation":    "B(OH)₃ + mannitol → mannitol–borate complex + H⁺",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "Complexation makes boric acid a much stronger acid, which allows precise titration with NaOH.",
+            "hazard_rise": "SAFE — routine analytical chemistry",
+            "temp":        "Room temperature",
+            "warning":     "✅ Basis of the mannitol–boric acid titration."
+        },
+        frozenset(["mannitol", "sucrose"]): {
+            "type":        "Lyophilisation Excipient Interaction",
+            "equation":    "Crystalline mannitol (bulking) + amorphous sucrose (stabiliser)",
+            "conditions":  "Freeze-drying, mannitol:sucrose ratio ≥ 4:1 for crystallisation",
+            "outcome":     "Too much sucrose prevents mannitol crystallising, leading to a collapsed cake. A balanced ratio gives an elegant cake and protein stability.",
+            "hazard_rise": "INFO — formulation compatibility, not a safety hazard",
+            "temp":        "Annealing at about −20°C is used to induce crystallisation",
+            "warning":     "🔶 Optimise the ratio and include an annealing step."
+        },
+        frozenset(["ampicillin", "kanamycin"]): {
+            "type":        "β-Lactam–Aminoglycoside Interaction",
+            "equation":    "Penicillin acylates aminoglycoside amine groups (inactivation in vitro)",
+            "conditions":  "Concentrated mixed stock solutions, prolonged storage or warm",
+            "outcome":     "Mixed concentrated stocks slowly lose potency, but both antibiotics can safely be added to cooled agar separately.",
+            "hazard_rise": "WARNING — loss of selection potency",
+            "temp":        "Accelerated at 37°C",
+            "warning":     "🔶 Store antibiotic stocks separately and combine only when preparing plates."
+        },
+        frozenset(["triethanolamine", "boric acid"]): {
+            "type":        "Ester Formation — Triethanolamine Borate",
+            "equation":    "N(CH₂CH₂OH)₃ + B(OH)₃ → N(CH₂CH₂O)₃B + 3H₂O",
+            "conditions":  "Mild heating with water removal",
+            "outcome":     "TEA borate esters form and are used as corrosion inhibitors and buffering agents.",
+            "hazard_rise": "WARNING — irritant mixture",
+            "temp":        "Mild heating",
+            "warning":     "🔶 Boric acid is a reproductive toxin. Avoid skin exposure."
+        },
+        frozenset(["sodium bicarbonate", "acetic acid"]): {
+            "type":        "Acid-Carbonate Effervescence",
+            "equation":    "NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂↑",
+            "conditions":  "Aqueous, room temperature",
+            "outcome":     "CO₂ foams vigorously and sodium acetate forms, an acetate buffer component.",
+            "hazard_rise": "SAFE — mild neutralisation",
+            "temp":        "Slightly endothermic",
+            "warning":     "✅ Do not seal the container; CO₂ builds pressure."
+        },
+        frozenset(["ethanol", "ammonium sulfate"]): {
+            "type":        "Aqueous Two-Phase Salting-Out",
+            "equation":    "EtOH (aq) + (NH₄)₂SO₄ (high conc.) → ethanol-rich upper phase + salt-rich lower phase",
+            "conditions":  "Concentrated ammonium sulfate, room temperature",
+            "outcome":     "Salting-out drives phase separation, used to partition proteins and metabolites.",
+            "hazard_rise": "WARNING — flammable ethanol",
+            "temp":        "Room temperature",
+            "warning":     "🔶 Keep away from ignition sources."
+        },
+        frozenset(["acetonitrile", "magnesium sulfate"]): {
+            "type":        "Salting-Out Extraction (QuEChERS)",
+            "equation":    "MeCN/H₂O + MgSO₄ + NaCl → MeCN phase + aqueous phase",
+            "conditions":  "Room temperature, vigorous shaking, MgSO₄ absorbs water exothermically",
+            "outcome":     "Salts drive acetonitrile out of the water layer, giving a dry organic extract for pesticide and drug analysis.",
+            "hazard_rise": "WARNING — flammable toxic solvent and exotherm",
+            "temp":        "Exothermic as MgSO₄ hydrates",
+            "warning":     "🔶 Add salts after the solvent and shake immediately to avoid clumping."
         },
     }
 
