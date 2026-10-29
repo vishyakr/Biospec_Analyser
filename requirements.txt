@@ -1,4 +1,4 @@
 streamlit[auth]
 pandas
 plotly
-reportlab
+numpy
