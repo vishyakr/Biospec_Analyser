@@ -21,7 +21,7 @@ df = load_data()
 # Replace these with the real Google account emails.
 ALLOWED_EMAILS = {
     "vishyakr@gmail.com",
-    "vishalk0062.sse@saveetha.com
+    "vishalk0062.sse@saveetha.com",
 }
 ADMINS = {
     "vishalk0062.sse@saveetha.com",
