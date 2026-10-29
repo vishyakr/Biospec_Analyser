@@ -1,4 +1,5 @@
-streamlit[auth]
-pandas
-plotly
-numpy
+   streamlit[auth]>=1.45
+   Authlib>=1.3.2
+   pandas
+   plotly
+   numpy
