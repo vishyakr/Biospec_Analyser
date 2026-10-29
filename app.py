@@ -17,6 +17,28 @@ def load_data():
 
 df = load_data()
 
+# ── Authentication ────────────────────────────────────────
+# Replace these with the real Google account emails.
+ALLOWED_EMAILS = {
+    "you@gmail.com",
+    "colleague@gmail.com",
+}
+ADMINS = {
+    "you@gmail.com",
+}
+ADMIN_ONLY_PAGES = {"Stock Manager", "Datasets"}
+
+if not st.user.is_logged_in:
+    st.markdown("## 🧬 Labmetrica")
+    st.caption("Please sign in to continue.")
+    st.button("Sign in with Google", on_click=st.login)
+    st.stop()
+
+if st.user.email not in ALLOWED_EMAILS:
+    st.error("Your account doesn't have access to this app.")
+    st.button("Log out", on_click=st.logout)
+    st.stop()
+
 # ── Sidebar ───────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 🧬 LABMETRICA")
