@@ -20,11 +20,11 @@ df = load_data()
 # ── Authentication ────────────────────────────────────────
 # Replace these with the real Google account emails.
 ALLOWED_EMAILS = {
-    "you@gmail.com",
-    "colleague@gmail.com",
+    "vishyakr@gmail.com",
+    "vishalk0062.sse@saveetha.com
 }
 ADMINS = {
-    "you@gmail.com",
+    "vishalk0062.sse@saveetha.com",
 }
 ADMIN_ONLY_PAGES = {"Stock Manager", "Datasets"}
 
